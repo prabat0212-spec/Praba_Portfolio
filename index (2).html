@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prabavathy Gurumoorthy — Case File: Media Analyst</title>
+<meta name="description" content="Gotham-styled portfolio of Prabavathy Gurumoorthy, Media Analyst specializing in ad operations, campaign trafficking, and brand-safety verification.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Special+Elite&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gotham:#08090C;
+    --gotham-2:#121520;
+    --gotham-3:#191D29;
+    --line:#2B3040;
+    --yellow:#F0C419;
+    --yellow-dim:#C9A116;
+    --red:#B92A2A;
+    --fog:#8A93A3;
+    --white:#ECE9DF;
+    --paper:#E7E1CE;
+    --paper-2:#DED6BE;
+    --paper-line:#C6BC9C;
+    --ink:#1B1710;
+    --max:1140px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--gotham);
+    color:var(--white);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Oswald', sans-serif; margin:0; text-transform:uppercase;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .type{font-family:'Special Elite', monospace;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--yellow); outline-offset:3px;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  img,svg{display:block;}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(8,9,12,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{max-width:var(--max); margin:0 auto; padding:14px 28px; display:flex; align-items:center; justify-content:space-between;}
+  .nav-mark{display:flex; align-items:center; gap:10px; text-decoration:none; font-family:'Oswald',sans-serif; font-size:15px; letter-spacing:0.08em; color:var(--white);}
+  .nav-mark svg{width:24px; height:14px;}
+  nav.links{display:flex; gap:26px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase;}
+  nav.links a{text-decoration:none; color:var(--fog);}
+  nav.links a:hover{color:var(--yellow);}
+  .nav-toggle{display:none; background:none; border:1px solid var(--line); color:var(--white); width:38px; height:38px; border-radius:2px; cursor:pointer;}
+  @media (max-width:780px){
+    nav.links{display:none;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO / BAT-SIGNAL ---------- */
+  .hero{position:relative; padding:172px 0 84px; overflow:hidden; background:
+    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(240,196,25,0.16), transparent 60%),
+    linear-gradient(180deg, #05060A 0%, #0A0C12 55%, #0D1018 100%);
+  }
+  .beam-wrap{position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:640px; height:520px; pointer-events:none;}
+  .beam{
+    position:absolute; top:0; left:50%; width:0; height:0;
+    border-left:230px solid transparent;
+    border-right:230px solid transparent;
+    border-top:480px solid rgba(240,196,25,0.09);
+    transform:translateX(-50%);
+    animation: sway 9s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  @keyframes sway{
+    0%,100%{transform:translateX(-50%) rotate(-1.4deg);}
+    50%{transform:translateX(-50%) rotate(1.4deg);}
+  }
+  .bat-mark{position:absolute; top:26px; left:50%; transform:translateX(-50%); width:120px; height:64px; opacity:0.92;
+    filter:drop-shadow(0 0 18px rgba(240,196,25,0.55));
+    animation:glow 4.5s ease-in-out infinite;
+  }
+  @keyframes glow{
+    0%,100%{opacity:0.78;}
+    50%{opacity:1;}
+  }
+  .bat-mark path{fill:#05060A;}
+
+  .hero-inner{position:relative; text-align:center;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--yellow); margin-bottom:20px;
+  }
+  h1.name{
+    font-size:clamp(38px, 7.4vw, 82px); line-height:0.98; font-weight:700; letter-spacing:0.01em; color:var(--white);
+  }
+  .role{
+    font-family:'IBM Plex Mono', monospace; font-size:clamp(13px,1.9vw,16px); color:var(--fog);
+    margin-top:20px; letter-spacing:0.06em; text-transform:uppercase;
+  }
+  .role strong{color:var(--yellow); font-weight:500;}
+
+  .scanner{
+    margin:34px auto 0; max-width:760px;
+    border:1px solid var(--line); background:rgba(18,21,32,0.7);
+    border-radius:3px; padding:13px 20px;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:9px 18px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.04em;
+  }
+  .scanner .live{display:flex; align-items:center; gap:8px; color:#7CC98A; text-transform:uppercase; font-weight:500;}
+  .pulse{width:7px;height:7px;border-radius:50%;background:#7CC98A; box-shadow:0 0 0 0 rgba(124,201,138,0.6); animation:pulse 2.2s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(124,201,138,0.55);}
+    70%{box-shadow:0 0 0 9px rgba(124,201,138,0);}
+    100%{box-shadow:0 0 0 0 rgba(124,201,138,0);}
+  }
+  .scanner .sep{color:var(--line);}
+  .scanner span.item{color:var(--fog);}
+  .scanner span.item b{color:var(--white); font-weight:500;}
+
+  .hero-copy{max-width:600px; margin:32px auto 0; color:#BFC4CE; font-size:16px; line-height:1.7;}
+  .cta-row{margin-top:32px; display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
+  .btn{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;
+    padding:13px 22px; border-radius:2px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .btn-primary{background:var(--yellow); color:#1A1400; font-weight:600;}
+  .btn-primary:hover{background:#FFDA5C; transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--line); color:var(--white);}
+  .btn-ghost:hover{border-color:var(--yellow); color:var(--yellow); transform:translateY(-1px);}
+
+  /* ---------- LABELS ---------- */
+  .section-label{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
+    display:flex; align-items:center; gap:12px; margin-bottom:46px; color:var(--yellow-dim);
+  }
+  .section-label .rule{flex:1; height:1px; background:var(--line);}
+  section{padding:100px 0;}
+
+  /* ---------- PROFILE ---------- */
+  .profile{background:var(--gotham-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .profile-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:56px;}
+  @media (max-width:820px){.profile-grid{grid-template-columns:1fr;}}
+  .profile h2{font-size:clamp(24px,3.2vw,34px); line-height:1.28; font-weight:600; color:var(--white);}
+  .profile p{margin-top:18px; line-height:1.75; color:#B7BECB; font-size:15.5px;}
+  .idcard{
+    background:var(--paper); color:var(--ink); border-radius:3px; padding:26px;
+    border:1px solid var(--paper-line);
+    position:relative;
+  }
+  .idcard::before{
+    content:"CLASSIFIED"; position:absolute; top:14px; right:-30px; transform:rotate(35deg);
+    background:var(--red); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em;
+    padding:3px 34px; opacity:0.85;
+  }
+  .idcard h3{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#6B6248; margin-bottom:16px;}
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); margin-top:2px;}
+  .stat{background:var(--paper); padding:20px 18px;}
+  .stat .num{font-family:'Oswald',sans-serif; font-size:34px; font-weight:700; color:var(--ink);}
+  .stat .num span{color:var(--red);}
+  .stat .lbl{font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; color:#6B6248; margin-top:6px;}
+
+  /* ---------- CASE LOG (EXPERIENCE) ---------- */
+  .caselog{background:var(--gotham);}
+  .case{
+    background:var(--paper); color:var(--ink); border-radius:2px;
+    border:1px solid var(--paper-line);
+    box-shadow:0 14px 28px rgba(0,0,0,0.35);
+    padding:28px 30px; margin-bottom:26px;
+    position:relative;
+  }
+  .case:last-child{margin-bottom:0;}
+  .case::before{
+    content:""; position:absolute; top:-9px; left:34px; width:60px; height:18px;
+    background:repeating-linear-gradient(45deg, rgba(230,220,190,0.9), rgba(230,220,190,0.9) 4px, rgba(200,188,150,0.7) 4px, rgba(200,188,150,0.7) 8px);
+    transform:rotate(-3deg); opacity:0.85;
+  }
+  .case-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 20px; border-bottom:1px dashed var(--paper-line); padding-bottom:12px; margin-bottom:14px;}
+  .case-file-no{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; color:#6B6248; text-transform:uppercase;}
+  .case-status{
+    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase;
+    padding:3px 10px; border-radius:2px; border:1px solid var(--red); color:var(--red); font-weight:600;
+  }
+  .case-status.closed{border-color:#6B6248; color:#6B6248;}
+  .case-title{font-family:'Oswald',sans-serif; font-size:22px; font-weight:600; margin-top:4px;}
+  .case-title .company{color:var(--red);}
+  .case-date{font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6B6248; margin-top:4px;}
+  .case-clients{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6B6248; margin:10px 0 6px;}
+  .case-clients b{color:var(--ink);}
+  .case p, .case ul{font-family:'Special Elite', monospace; font-size:14px; line-height:1.85; color:#302A1E;}
+  .case ul{margin:8px 0 0; padding-left:20px;}
+  .case ul li{margin-bottom:6px;}
+
+  /* ---------- ARSENAL (PLATFORMS) ---------- */
+  .arsenal{background:var(--gotham-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .belt-group{margin-bottom:32px;}
+  .belt-group:last-child{margin-bottom:0;}
+  .belt-group h3{font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--fog); margin-bottom:14px; font-weight:500;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.02em;
+    background:var(--gotham-3); color:var(--white); border:1px solid var(--line);
+    padding:9px 14px; border-radius:2px; display:inline-flex; align-items:center; gap:8px;
+    transition:border-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+  }
+  .chip::before{content:""; width:6px; height:6px; background:var(--yellow); clip-path:polygon(50% 0%, 0% 100%, 100% 100%); flex:none;}
+  .chip:hover{border-color:var(--yellow); color:var(--yellow); transform:translateY(-2px);}
+
+  /* ---------- COMMENDATIONS (AWARDS) ---------- */
+  .commend{background:var(--gotham);}
+  .medal-list{display:flex; flex-direction:column;}
+  .medal{
+    display:grid; grid-template-columns:78px 1fr auto; gap:20px; align-items:baseline;
+    padding:20px 0; border-top:1px solid var(--line);
+  }
+  .medal:last-child{border-bottom:1px solid var(--line);}
+  .medal .yr{font-family:'IBM Plex Mono',monospace; color:var(--yellow); font-size:14px;}
+  .medal .title{font-size:15px; color:var(--white);}
+  .medal .org{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--fog); text-align:right; white-space:nowrap;}
+  @media (max-width:600px){
+    .medal{grid-template-columns:1fr; gap:4px;}
+    .medal .org{text-align:left;}
+  }
+
+  /* ---------- TRAINING (EDUCATION) ---------- */
+  .training{background:var(--gotham-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .train-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  @media (max-width:700px){.train-grid{grid-template-columns:1fr;}}
+  .train-card{border:1px solid var(--line); background:var(--gotham-3); padding:28px; border-radius:3px;}
+  .train-card h3{font-family:'Oswald',sans-serif; font-size:18px; font-weight:600; margin-bottom:6px; color:var(--white);}
+  .train-card .sub{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--fog);}
+  .lang-row{display:flex; gap:10px; margin-top:14px;}
+  .lang-pill{font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:6px 12px; border:1px solid var(--line); border-radius:20px; color:var(--fog);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:#05060A; padding:100px 0 48px;}
+  .contact-inner{display:flex; flex-wrap:wrap; justify-content:space-between; gap:48px;}
+  .contact h2{font-size:clamp(28px,4.6vw,48px); line-height:1.12; font-weight:700; max-width:560px; color:var(--white);}
+  .contact h2 span{color:var(--yellow);}
+  .contact-list{font-family:'IBM Plex Mono',monospace; font-size:14px; line-height:2.3;}
+  .contact-list a{text-decoration:none; color:var(--white); border-bottom:1px solid var(--line);}
+  .contact-list a:hover{color:var(--yellow); border-color:var(--yellow);}
+  .contact-list .k{color:var(--fog); display:inline-block; width:70px;}
+  .stamp{
+    margin-top:56px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    padding-top:26px; border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--fog);
+  }
+  .stamp .seal{
+    display:inline-flex; align-items:center; gap:8px; border:1px solid var(--yellow); color:var(--yellow);
+    padding:5px 10px; border-radius:2px; letter-spacing:0.1em; text-transform:uppercase;
+  }
+
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity 0.6s ease, transform 0.6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">
+      <svg viewBox="0 0 100 56" aria-hidden="true"><path d="M50 22c-2-7-8-13-15-15 3 4 4 8 4 8s-9-6-17-3c5 2 8 5 8 5S18 15 8 20c6 0 10 2 10 2s-8 3-10 8c5-2 9-2 9-2s-4 5-3 10c3-4 6-6 6-6s0 6 4 10c0-5 2-8 2-8s3 6 8 8c-2-4-2-7-2-7s6 4 12 3c-3-2-5-5-5-5s7 2 13 -1c0 0-6-1-9-4 6 1 12-2 14-6-4 1-8 0-8 0s7-3 8-9c-3 2-6 3-6 3s3-6 0-11c-1 4-4 7-4 7s0-6-4-10c1 5 0 8 0 8s-2-4-6-6c2 3 3 6 3 6z" fill="#F0C419"/></svg>
+      PRABAVATHY&nbsp;G. — CASE&nbsp;FILE
+    </a>
+    <nav class="links">
+      <a href="#profile">Profile</a>
+      <a href="#caselog">Case Log</a>
+      <a href="#arsenal">Arsenal</a>
+      <a href="#commend">Commendations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="beam-wrap" aria-hidden="true">
+      <div class="beam"></div>
+      <svg class="bat-mark" viewBox="0 0 240 120">
+        <g>
+          <path d="M120 60
+                   C114 44 100 30 84 26
+                   C90 32 92 40 90 46
+                   C78 34 58 30 44 36
+                   C54 40 60 46 62 50
+                   C46 44 24 46 10 58
+                   C24 58 34 62 38 66
+                   C22 66 8 74 2 86
+                   C16 82 28 82 34 84
+                   C20 88 10 100 8 114
+                   C20 104 32 98 40 96
+                   C32 104 28 116 30 128
+                   C38 116 46 108 52 104
+                   C50 112 52 122 58 130
+                   C60 118 64 108 70 102
+                   C72 110 78 116 86 118
+                   C82 110 80 102 82 96
+                   C90 100 100 100 108 96
+                   C100 92 94 86 92 80
+                   C100 82 110 80 116 74
+                   C108 72 102 66 100 60
+                   C108 60 116 58 120 52 Z" fill="#05060A" transform="translate(0,-6) scale(1,0.86)"/>
+          <path d="M120 60
+                   C126 44 140 30 156 26
+                   C150 32 148 40 150 46
+                   C162 34 182 30 196 36
+                   C186 40 180 46 178 50
+                   C194 44 216 46 230 58
+                   C216 58 206 62 202 66
+                   C218 66 232 74 238 86
+                   C224 82 212 82 206 84
+                   C220 88 230 100 232 114
+                   C220 104 208 98 200 96
+                   C208 104 212 116 210 128
+                   C202 116 194 108 188 104
+                   C190 112 188 122 182 130
+                   C180 118 176 108 170 102
+                   C168 110 162 116 154 118
+                   C158 110 160 102 158 96
+                   C150 100 140 100 132 96
+                   C140 92 146 86 148 80
+                   C140 82 130 80 124 74
+                   C132 72 138 66 140 60
+                   C132 60 124 58 120 52 Z" fill="#05060A" transform="translate(0,-6) scale(1,0.86)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="eyebrow">Gotham Ad Operations Division — Classified File</div>
+      <h1 class="name">Prabavathy<br>Gurumoorthy</h1>
+      <p class="role">Media Analyst · <strong>Trafficking, Verification &amp; Surveillance</strong> of Ad Campaigns</p>
+
+      <div class="scanner">
+        <span class="live"><span class="pulse"></span>Status: Active</span>
+        <span class="sep">▸</span>
+        <span class="item"><b>5+ yrs</b> field experience</span>
+        <span class="sep">▸</span>
+        <span class="item">Precinct: <b>Chennai, IN</b></span>
+        <span class="sep">▸</span>
+        <span class="item">Current post: <b>Integrate</b></span>
+      </div>
+
+      <p class="hero-copy">Five-plus years working ad operations on the advertiser side — trafficking, troubleshooting, and optimizing display, video, and mobile campaigns across CM360, DV360, and Xandr, with DoubleVerify, IAS, and Moat running surveillance on every placement. Two prior years on the front line of inbound and outbound support sharpened the interrogation skills: find the root cause, fix it, report back.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:prabag0212@gmail.com">Open Case File</a>
+        <a class="btn btn-ghost" href="http://linkedin.com/in/prabavathy98ab73129" target="_blank" rel="noopener">Full Dossier ↗</a>
+        <a class="btn btn-ghost" href="tel:+919566861609">Direct Line</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="profile" id="profile">
+    <div class="wrap">
+      <div class="section-label"><span>Exhibit A / Profile</span><span class="rule"></span></div>
+      <div class="profile-grid">
+        <div class="reveal">
+          <h2>Every campaign gets the same treatment: accurate, on-brand, on time.</h2>
+          <p>My work sits at the intersection of ad servers and account teams — building and QA-ing placements, chasing down tag and creative issues before they hit delivery, and turning DAP/Workfront data into updates stakeholders can act on. I've run cases for entertainment clients like HBO Max, Warner Bros., and Warner Bros. Discovery, and I'm currently expanding into DV360 setup and optimization.</p>
+        </div>
+        <div class="idcard reveal">
+          <h3>Subject Identification</h3>
+          <div class="stat-grid">
+            <div class="stat"><div class="num"><span>5</span>+</div><div class="lbl">Years in Ad Ops &amp; CX</div></div>
+            <div class="stat"><div class="num">6</div><div class="lbl">Employers on Record</div></div>
+            <div class="stat"><div class="num">12</div><div class="lbl">Tools &amp; Platforms</div></div>
+            <div class="stat"><div class="num">5</div><div class="lbl">Commendations</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE LOG -->
+  <section class="caselog" id="caselog">
+    <div class="wrap">
+      <div class="section-label"><span>Exhibit B / Case Log</span><span class="rule"></span></div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 008</span>
+          <span class="case-status">Active Case</span>
+        </div>
+        <div class="case-title">Operation Specialist L2 · <span class="company">Integrate</span></div>
+        <div class="case-date">May 2024 — Present</div>
+        <ul>
+          <li>Trafficked video, mobile, and web campaigns across Xandr, DCM, and Sizmek, assigning queue work by team strength.</li>
+          <li>Tracked impressions and clicks in DAP and Xandr, keeping reporting in Workfront precise and current.</li>
+          <li>Wrote and maintained process documentation, and grew the team's DV360 setup and optimization skills.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 007</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Media Analyst · <span class="company">Annalect</span></div>
+        <div class="case-date">Sep 2022 — May 2024</div>
+        <div class="case-clients">Clients on file: <b>HBO Max · Warner Bros. · Warner Bros. Discovery</b></div>
+        <ul>
+          <li>Serviced client accounts for accurate trafficking, contract fulfillment, and QC across multiple sites.</li>
+          <li>Ran campaign creation, placements, and bulk creative uploads in DCM and Jira, including rich media, HTML, and JPG assets.</li>
+          <li>Implemented tracking pixels, managed tag sharing, and monitored delivery through IAS.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 006</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Senior Ad Trafficker · <span class="company">Paragon Digital Services</span></div>
+        <div class="case-date">Sep 2021 — Sep 2022</div>
+        <ul>
+          <li>Owned end-to-end display and video trafficking in DCM against the shared media plan, plus post-launch support.</li>
+          <li>Audited taxonomy, naming conventions, and creatives for compliance with the plan and industry standards.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 005</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Junior Ad Trafficker · <span class="company">Paragon Digital Services</span></div>
+        <div class="case-date">Nov 2020 — Sep 2021</div>
+        <ul>
+          <li>Configured and executed display &amp; video campaigns in DCM/CM360 across Google CM, DV360, and social ad managers.</li>
+          <li>Monitored delivery, optimized performance, and reported results back to account management.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 004</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Customer Relationship Consultant · <span class="company">Allianz Worldwide Partners</span></div>
+        <div class="case-date">Nov 2018 — Nov 2020</div>
+        <ul>
+          <li>Resolved overdue tickets and liaised between customers, sales, and support to protect retention.</li>
+          <li>Provided troubleshooting for FordPass, handling issue resolution end to end via calls and email.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 003</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Senior Telecaller · <span class="company">Empire Business Source</span></div>
+        <div class="case-date">May 2018 — Oct 2018</div>
+        <ul>
+          <li>Handled 250+ outbound calls a day, explaining life insurance products and closing sales against target.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 002</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">Telecaller · <span class="company">Empire Business Source</span></div>
+        <div class="case-date">Jan 2017 — Apr 2018</div>
+        <ul>
+          <li>Managed ~150 inbound/outbound calls daily, plus scheduling and reminders as personal assistant to the Managing Director.</li>
+        </ul>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <span class="case-file-no">File No. 001</span>
+          <span class="case-status closed">Closed</span>
+        </div>
+        <div class="case-title">International Sales Executive · <span class="company">Data Desk Info Solution</span></div>
+        <div class="case-date">May 2016 — Dec 2016</div>
+        <ul>
+          <li>Pitched the Canadian ROGERS product to international customers, securing 30 long-term accounts in 30 days.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section class="arsenal" id="arsenal">
+    <div class="wrap">
+      <div class="section-label"><span>Exhibit C / Utility Belt</span><span class="rule"></span></div>
+
+      <div class="belt-group reveal">
+        <h3>Signal Trackers — Ad Servers &amp; Trafficking</h3>
+        <div class="chip-row">
+          <span class="chip">CM360</span><span class="chip">DCM</span><span class="chip">DV360 (learner)</span>
+          <span class="chip">Xandr</span><span class="chip">Sizmek</span><span class="chip">Prisma</span>
+          <span class="chip">Taxonomy Builder</span>
+        </div>
+      </div>
+
+      <div class="belt-group reveal">
+        <h3>Surveillance &amp; Verification — Brand Safety</h3>
+        <div class="chip-row">
+          <span class="chip">DoubleVerify</span><span class="chip">IAS</span><span class="chip">Moat</span>
+        </div>
+      </div>
+
+      <div class="belt-group reveal">
+        <h3>Intel &amp; Reporting</h3>
+        <div class="chip-row">
+          <span class="chip">DAP</span><span class="chip">Workfront</span><span class="chip">Power BI</span>
+          <span class="chip">Excel — macros &amp; pivot tables</span>
+        </div>
+      </div>
+
+      <div class="belt-group reveal">
+        <h3>Field Gear — Growth &amp; Productivity</h3>
+        <div class="chip-row">
+          <span class="chip">Google Ads</span><span class="chip">SEO</span><span class="chip">SMM</span>
+          <span class="chip">Jira</span><span class="chip">Snagit</span><span class="chip">Microsoft Office</span>
+          <span class="chip">CRM &amp; Telemarketing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENDATIONS -->
+  <section class="commend" id="commend">
+    <div class="wrap">
+      <div class="section-label"><span>Exhibit D / Commendations</span><span class="rule"></span></div>
+      <div class="medal-list reveal">
+        <div class="medal"><div class="yr">2024</div><div class="title">On Spot Award for the Quarter</div><div class="org">Integrate</div></div>
+        <div class="medal"><div class="yr">2023</div><div class="title">Recognized in the Annalect Ascent Program</div><div class="org">Annalect</div></div>
+        <div class="medal"><div class="yr">2021</div><div class="title">Good Team Player Award</div><div class="org">Paragon Digital Services</div></div>
+        <div class="medal"><div class="yr">2020</div><div class="title">Rising Star of the Month</div><div class="org">Allianz Worldwide Partners</div></div>
+        <div class="medal"><div class="yr">2019</div><div class="title">Outstanding Performance in "Quality" — H1 &amp; Q1</div><div class="org">Allianz Worldwide Partners</div></div>
+        <div class="medal"><div class="yr">2018</div><div class="title">Recognized as a Hard Worker</div><div class="org">Empire Business Source</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="training" id="training">
+    <div class="wrap">
+      <div class="section-label"><span>Exhibit E / Training &amp; Languages</span><span class="rule"></span></div>
+      <div class="train-grid">
+        <div class="train-card reveal">
+          <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+          <div class="sub">PRIST University · Jun 2012 — May 2016</div>
+        </div>
+        <div class="train-card reveal">
+          <h3>Field Languages</h3>
+          <div class="sub">Fluent in both, used daily with clients &amp; teams</div>
+          <div class="lang-row">
+            <span class="lang-pill">Tamil</span>
+            <span class="lang-pill">English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CONTACT -->
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <h2>Trafficking a new campaign? <span>Signal the analyst.</span></h2>
+      <div class="contact-list">
+        <div><span class="k">Email</span><a href="mailto:prabag0212@gmail.com">prabag0212@gmail.com</a></div>
+        <div><span class="k">Phone</span><a href="tel:+919566861609">+91 95668 61609</a></div>
+        <div><span class="k">LinkedIn</span><a href="http://linkedin.com/in/prabavathy98ab73129" target="_blank" rel="noopener">linkedin.com/in/prabavathy98ab73129</a></div>
+        <div><span class="k">Precinct</span><span>Chennai — 600130, India</span></div>
+      </div>
+    </div>
+    <div class="stamp">
+      <span>© <span id="year"></span> Prabavathy Gurumoorthy — Gotham Ad Operations Division</span>
+      <span class="seal">✓ Case Verified</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('navToggle');
+  const links = document.querySelector('nav.links');
+  toggle.addEventListener('click', () => {
+    const open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'fixed';
+    links.style.top = '60px';
+    links.style.right = '20px';
+    links.style.background = '#121520';
+    links.style.border = '1px solid #2B3040';
+    links.style.padding = '16px 20px';
+    links.style.borderRadius = '4px';
+    links.style.gap = '14px';
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
